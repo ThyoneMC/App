@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Main Palettes -->
+    <SolidColorBrush x:Key="PaletteWhite" Color="#C9D4FF"/>
+    <SolidColorBrush x:Key="PaletteGray" Color="#414452"/>
+    <SolidColorBrush x:Key="Palette4" Color="#3A3E98"/>
+    <SolidColorBrush x:Key="Palette3" Color="#5256BC"/>
+    <SolidColorBrush x:Key="Palette2" Color="#527CBC"/>
+    <SolidColorBrush x:Key="Palette1" Color="#4AB1D8"/>
+    
+</ResourceDictionary>

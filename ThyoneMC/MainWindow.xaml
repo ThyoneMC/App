@@ -4,9 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThyoneMC"
+        xmlns:viewModel="clr-namespace:ThyoneMC.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="ThyoneMC" Height="720" Width="1280"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid Background="{StaticResource Palette3}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- App Panel -->
+
+        <TextBlock Text="ThyoneMC"
+                   FontSize="20"
+                   FontStyle="Oblique"
+                   Foreground="{StaticResource PaletteGray}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Margin="10,0,0,0"/>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Content="-"
+                    x:Name="AppMinimizeButton"
+                    FontSize="25"
+                    Style="{StaticResource AppButtonTheme}"
+                    Click="AppMinimizeButton_Click"/>
+
+            <Button Content="X"
+                    x:Name="AppCloseButton"
+                    FontSize="20"
+                    Style="{StaticResource AppButtonTheme}"
+                    Click="AppCloseButton_Click"/>
+
+        </StackPanel>
+
+        <!-- Menu Bar -->
+
+        <Grid Grid.Row="1"
+              Background="{StaticResource Palette4}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+
+                <RadioButton Content="   🏠&#x0a;Home"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding HomeViewCommand}"
+                             IsChecked="True"/>
+
+                <RadioButton Content="   🖥️&#x0a;Servers"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding ServersViewCommand}"/>
+
+                <RadioButton Content="   ⚙️&#x0a;Settings"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding SettingsViewCommand}"/>
+
+            </StackPanel>
+
+            <!-- Pages -->
+
+            <ContentControl Grid.Column="1"
+                            Content="{Binding CurrentView}"
+                            BorderThickness="0"/>
+        </Grid>
+
     </Grid>
 </Window>
