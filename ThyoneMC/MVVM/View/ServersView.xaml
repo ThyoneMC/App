@@ -5,12 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ThyoneMC.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="685" d:DesignWidth="1066.7">
-    <Grid Background="{StaticResource Palette2}">
-        <TextBlock Text="Comming Soon..."
-                   FontSize="100"
-                   Foreground="White"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
+             d:DesignHeight="685" d:DesignWidth="1130">
+    <Grid Background="{StaticResource Palette1}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="610"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <RadioButton x:Name="ServerCreate"
+                         Grid.Column="0"
+                         Content="Create"
+                         Style="{StaticResource ServerButtonTheme}"
+                         Click="ServerCreate_Click"/>
+
+            <RadioButton x:Name="ServerAdd"
+                         Grid.Column="1"
+                         Content="Add"
+                         Style="{StaticResource ServerButtonTheme}"
+                         Click="ServerAdd_Click"/>
+
+            <RadioButton x:Name="ServerRemove"
+                         Grid.Column="2"
+                         Content="Remove"
+                         Style="{StaticResource ServerButtonTheme}"
+                         Click="ServerRemove_Click"/>
+        </Grid>
     </Grid>
 </UserControl>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ThyoneMC.Windows;
 
 namespace ThyoneMC.MVVM.View
 {
@@ -23,6 +24,25 @@ namespace ThyoneMC.MVVM.View
         public ServersView()
         {
             InitializeComponent();
+        }
+
+        private void ServerCreate_Click(object sender, RoutedEventArgs e)
+        {
+            ServerAddWindow addPopup = new ServerAddWindow();
+
+            addPopup.Show();
+
+            this.IsEnabled = false;
+        }
+
+        private void ServerAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ServerRemove_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

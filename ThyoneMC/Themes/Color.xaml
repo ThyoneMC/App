@@ -6,7 +6,7 @@
     <SolidColorBrush x:Key="PaletteGray" Color="#414452"/>
     <SolidColorBrush x:Key="Palette4" Color="#3A3E98"/>
     <SolidColorBrush x:Key="Palette3" Color="#5256BC"/>
-    <SolidColorBrush x:Key="Palette2" Color="#527CBC"/>
-    <SolidColorBrush x:Key="Palette1" Color="#4AB1D8"/>
+    <SolidColorBrush x:Key="Palette2" Color="#486bc2"/>
+    <SolidColorBrush x:Key="Palette1" Color="#438ed9"/>
     
 </ResourceDictionary>

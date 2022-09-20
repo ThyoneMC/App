@@ -31,7 +31,8 @@
                    Foreground="{StaticResource PaletteGray}"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
-                   Margin="10,0,0,0"/>
+                   Margin="10,0,0,0"
+                   Background="Transparent"/>
 
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Right">
