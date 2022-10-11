@@ -44,17 +44,17 @@ namespace ThyoneMC.Core
         public string[] toMultipleString(string message)
         {
             MatchCollection match = regex.Matches(message);
-            string[] stringArgs = { "" };
+            List<string> stringArgs = new List<string>();
 
             foreach (Match result in match)
             {
                 if (result.Success)
                 {
-                    stringArgs.Append(result.Value);
+                    stringArgs.Add(result.Value);
                 }
             }
 
-            return stringArgs;
+            return stringArgs.ToArray();
         }
     }
 }

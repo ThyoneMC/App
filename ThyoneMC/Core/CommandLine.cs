@@ -22,16 +22,11 @@ namespace ThyoneMC.Core
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.FileName = fileName;
         }
-        private string argsFromString(params string[] args)
-        {
-            string argString = MyRegex.argsFromString(args);
-
-            return $"{baseArgs} {argString}";
-        }
 
         public string Execute(params string[] args)
         {
-            process.StartInfo.Arguments = argsFromString(args);
+            string argString = MyRegex.argsFromString(args);
+            process.StartInfo.Arguments = $"{baseArgs} {argString}";
 
             process.Start();
             process.WaitForExit();
