@@ -28,21 +28,30 @@ namespace ThyoneMC.MVVM.View
 
         private void ServerCreate_Click(object sender, RoutedEventArgs e)
         {
-            ServerAddWindow addPopup = new ServerAddWindow();
+            ServerWindowPopup serverPopup = new ServerWindowPopup(ServerWindowPopup.ServerPopupMode.Create);
 
-            addPopup.Show();
-
-            this.IsEnabled = false;
+            serverPopup.Show();
         }
 
         private void ServerAdd_Click(object sender, RoutedEventArgs e)
         {
+            ServerWindowPopup serverPopup = new ServerWindowPopup(ServerWindowPopup.ServerPopupMode.Add);
 
+            serverPopup.Show();
         }
 
         private void ServerRemove_Click(object sender, RoutedEventArgs e)
         {
+            ServerWindowPopup serverPopup = new ServerWindowPopup(ServerWindowPopup.ServerPopupMode.Remove);
 
+            serverPopup.Show();
+        }
+
+        private void ServerLeave_Click(object sender, RoutedEventArgs e)
+        {
+            ServerWindowPopup serverPopup = new ServerWindowPopup(ServerWindowPopup.ServerPopupMode.Leave);
+
+            serverPopup.Show();
         }
     }
 }

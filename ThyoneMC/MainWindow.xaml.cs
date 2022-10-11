@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ThyoneMC.Core;
 
 namespace ThyoneMC
 {
@@ -20,8 +22,12 @@ namespace ThyoneMC
     /// </summary>
     public partial class MainWindow : Window
     {
+        CommandLine hamachi = new CommandLine(false, "C:\\Program Files (x86)\\LogMeIn Hamachi\\x64\\hamachi-2.exe", "--cli");
+
         public MainWindow()
         {
+            hamachi.Execute("logon");
+
             InitializeComponent();
         }
 
@@ -40,7 +46,9 @@ namespace ThyoneMC
 
         private void AppCloseButton_Click(object sender, RoutedEventArgs e)
         {
+            hamachi.Execute("logout");
+
             Application.Current.Shutdown();
-        }
+        } 
     }
 }

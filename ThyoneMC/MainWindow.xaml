@@ -55,22 +55,22 @@
         <Grid Grid.Row="1"
               Background="{StaticResource Palette4}">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="75"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
 
-                <RadioButton Content="   🏠&#x0a;Home"
+                <RadioButton Content="🏠"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding HomeViewCommand}"
                              IsChecked="True"/>
 
-                <RadioButton Content="   🖥️&#x0a;Servers"
+                <RadioButton Content="🖥️"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding ServersViewCommand}"/>
 
-                <RadioButton Content="   ⚙️&#x0a;Settings"
+                <RadioButton Content="⚙️"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding SettingsViewCommand}"/>
 

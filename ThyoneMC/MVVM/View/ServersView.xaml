@@ -17,6 +17,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <RadioButton x:Name="ServerCreate"
@@ -27,7 +28,7 @@
 
             <RadioButton x:Name="ServerAdd"
                          Grid.Column="1"
-                         Content="Add"
+                         Content="Join"
                          Style="{StaticResource ServerButtonTheme}"
                          Click="ServerAdd_Click"/>
 
@@ -36,6 +37,12 @@
                          Content="Remove"
                          Style="{StaticResource ServerButtonTheme}"
                          Click="ServerRemove_Click"/>
+
+            <RadioButton x:Name="ServerLeave"
+                         Grid.Column="3"
+                         Content="Leave"
+                         Style="{StaticResource ServerButtonTheme}"
+                         Click="ServerLeave_Click"/>
         </Grid>
     </Grid>
 </UserControl>
