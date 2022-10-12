@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
            TargetType="RadioButton"
-           x:Key="ServerButtonTheme">
+           x:Key="ServerWindowButtonTheme">
 
         <!-- Main -->
         <Style.Setters>
@@ -14,7 +14,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
                         <Border BorderBrush="{StaticResource Palette3}"
-                                BorderThickness="5"
+                                BorderThickness="3"
                                 Margin="5,3,5,3">
                             <Grid VerticalAlignment="Stretch"
                               HorizontalAlignment="Stretch"

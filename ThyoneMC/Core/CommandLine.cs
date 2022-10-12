@@ -18,7 +18,11 @@ namespace ThyoneMC.Core
             this.baseArgs = baseArgs;
             this.process = new Process();
 
+            process.StartInfo.CreateNoWindow = true;
+            process.StartInfo.LoadUserProfile = true;
             process.StartInfo.UseShellExecute = powershell;
+            process.StartInfo.RedirectStandardError = true;
+            process.StartInfo.RedirectStandardInput = true;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.FileName = fileName;
         }

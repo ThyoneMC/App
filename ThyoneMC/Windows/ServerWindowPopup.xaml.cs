@@ -42,44 +42,44 @@ namespace ThyoneMC.Windows
 
             if (mode == ServerPopupMode.Add)
             {
-                ServerAddText.Text = "Join Server";
+                ServerWindowText.Text = "Join Server";
             }
             else if (mode != ServerPopupMode.Create)
             {
-                ServerAddInputPassword.IsEnabled = false;
-                ServerAddInputPassword.Text = "";
-                ServerAddInputPassword.Background = Brushes.Transparent;
+                ServerWindowInputPassword.IsEnabled = false;
+                ServerWindowInputPassword.Text = "";
+                ServerWindowInputPassword.Background = Brushes.Transparent;
 
                 if (mode == ServerPopupMode.Remove)
                 {
-                    ServerAddText.Text = "Remove Server";
+                    ServerWindowText.Text = "Remove Server";
                 }
                 else if (mode == ServerPopupMode.Leave)
                 {
-                    ServerAddText.Text = "Leave Server";
+                    ServerWindowText.Text = "Leave Server";
                 }
             }
         }
 
-        private void ServerAddConfirm_Click(object sender, RoutedEventArgs e)
+        private void ServerWindowConfirm_Click(object sender, RoutedEventArgs e)
         {
             string messageReturn = "";
 
             if (mode == ServerPopupMode.Create)
             {
-                messageReturn = hamachi.Execute("create", ServerAddInputName.Text, ServerAddInputPassword.Text);
+                messageReturn = hamachi.Execute("create", ServerWindowInputName.Text, ServerWindowInputPassword.Text);
             }
             else if (mode == ServerPopupMode.Add)
             {
-                messageReturn = hamachi.Execute("join", ServerAddInputName.Text, ServerAddInputPassword.Text);
+                messageReturn = hamachi.Execute("join", ServerWindowInputName.Text, ServerWindowInputPassword.Text);
             }
             else if (mode == ServerPopupMode.Remove)
             {
-                messageReturn = hamachi.Execute("delete", ServerAddInputName.Text);
+                messageReturn = hamachi.Execute("delete", ServerWindowInputName.Text);
             }
             else if (mode == ServerPopupMode.Leave)
             {
-                messageReturn = hamachi.Execute("leave", ServerAddInputName.Text);
+                messageReturn = hamachi.Execute("leave", ServerWindowInputName.Text);
             }
 
             string message = (new MyRegex("(?<=,).*")).toString(messageReturn);
@@ -96,7 +96,7 @@ namespace ThyoneMC.Windows
             this.Close();
         }
 
-        private void ServerAddCancel_Click(object sender, RoutedEventArgs e)
+        private void ServerWindowCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

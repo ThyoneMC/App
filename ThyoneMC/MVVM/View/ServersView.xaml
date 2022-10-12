@@ -23,25 +23,25 @@
             <RadioButton x:Name="ServerCreate"
                          Grid.Column="0"
                          Content="Create"
-                         Style="{StaticResource ServerButtonTheme}"
+                         Style="{StaticResource ServerWindowButtonTheme}"
                          Click="ServerCreate_Click"/>
 
             <RadioButton x:Name="ServerAdd"
                          Grid.Column="1"
                          Content="Join"
-                         Style="{StaticResource ServerButtonTheme}"
+                         Style="{StaticResource ServerWindowButtonTheme}"
                          Click="ServerAdd_Click"/>
 
             <RadioButton x:Name="ServerRemove"
                          Grid.Column="2"
                          Content="Remove"
-                         Style="{StaticResource ServerButtonTheme}"
+                         Style="{StaticResource ServerWindowButtonTheme}"
                          Click="ServerRemove_Click"/>
 
             <RadioButton x:Name="ServerLeave"
                          Grid.Column="3"
                          Content="Leave"
-                         Style="{StaticResource ServerButtonTheme}"
+                         Style="{StaticResource ServerWindowButtonTheme}"
                          Click="ServerLeave_Click"/>
         </Grid>
     </Grid>

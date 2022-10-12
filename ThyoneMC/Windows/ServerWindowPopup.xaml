@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThyoneMC.Windows"
         mc:Ignorable="d"
-        Title="ThyoneMC (Add Server)" Height="450" Width="640"
+        Title="ThyoneMC (Server Settings)" Height="450" Width="640"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -21,14 +21,14 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock x:Name="ServerAddText"
+            <TextBlock x:Name="ServerWindowText"
                        Text="Create New Server"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontSize="40"
                        Foreground="{StaticResource PaletteWhite}"/>
 
-            <TextBox x:Name="ServerAddInputName"
+            <TextBox x:Name="ServerWindowInputName"
                      Grid.Row="1"
                      Margin="15,30,15,30"
                      Text="Name"
@@ -39,7 +39,7 @@
                      Background="{StaticResource Palette4}"
                      BorderThickness="0"/>
 
-            <TextBox x:Name="ServerAddInputPassword"
+            <TextBox x:Name="ServerWindowInputPassword"
                      Grid.Row="2"
                      Margin="15,30,15,30"
                      Text="Password (Optional)"
@@ -56,18 +56,18 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <RadioButton x:Name="ServerAddConfirm"
+                <RadioButton x:Name="ServerWindowConfirm"
                          Grid.Column="0"
                          Content="Confirm"
-                         Style="{StaticResource ServerButtonTheme}"
-                         Click="ServerAddConfirm_Click"
+                         Style="{StaticResource ServerWindowButtonTheme}"
+                         Click="ServerWindowConfirm_Click"
                          Margin="3"/>
 
-                <RadioButton x:Name="ServerAddCancel"
+                <RadioButton x:Name="ServerWindowCancel"
                          Grid.Column="1"
                          Content="Cancel"
-                         Style="{StaticResource ServerButtonTheme}"
-                         Click="ServerAddCancel_Click"
+                         Style="{StaticResource ServerWindowButtonTheme}"
+                         Click="ServerWindowCancel_Click"
                          Margin="3"/>
             </Grid>
         </Grid>

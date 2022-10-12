@@ -16,7 +16,7 @@
 
                 <ResourceDictionary Source="Themes/MenuButton.xaml"/>
                 <ResourceDictionary Source="Themes/AppButton.xaml"/>
-                <ResourceDictionary Source="Themes/ServerButton.xaml"/>
+                <ResourceDictionary Source="Themes/ServerWindowButton.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
 
