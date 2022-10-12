@@ -22,7 +22,7 @@ namespace ThyoneMC
     /// </summary>
     public partial class MainWindow : Window
     {
-        CommandLine hamachi = new CommandLine(false, "C:\\Program Files (x86)\\LogMeIn Hamachi\\x64\\hamachi-2.exe", "--cli");
+        readonly CommandLine hamachi = new CommandLine(false, "C:\\Program Files (x86)\\LogMeIn Hamachi\\x64\\hamachi-2.exe", "--cli");
 
         public MainWindow()
         {
