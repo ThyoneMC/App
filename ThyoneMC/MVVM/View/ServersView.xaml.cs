@@ -24,6 +24,9 @@ namespace ThyoneMC.MVVM.View
         public ServersView()
         {
             InitializeComponent();
+
+            ServerListBox.Items.Add(new ServerItemView());
+            ServerListBox.Items.Add(new ServerItemView());
         }
 
         private void ServerCreate_Click(object sender, RoutedEventArgs e)

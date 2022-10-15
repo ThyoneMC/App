@@ -12,6 +12,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <ListBox x:Name="ServerListBox"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top">
+        </ListBox>
+
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

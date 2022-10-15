@@ -111,6 +111,9 @@
     <Compile Include="Core\FileController.cs" />
     <Compile Include="Core\MyRegex.cs" />
     <Compile Include="Core\CommandLine.cs" />
+    <Compile Include="MVVM\View\ServerItemView.xaml.cs">
+      <DependentUpon>ServerItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ServerWindowPopup.xaml.cs">
       <DependentUpon>ServerWindowPopup.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\ServerItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
